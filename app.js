@@ -19,8 +19,7 @@ app.use(
         {
             origin:"*",
             methods:["GET","POST","PUT","DELETE"],
-            credentials:true,  
-            CORS_ORIGIN_ALLOW_ALL:true
+            credentials:true 
         }
     )
 )
