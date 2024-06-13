@@ -15,13 +15,7 @@ app.use(cookieParser());
 //using routes
 
 app.use(
-    cors(
-        {
-            origin:"*",
-            methods:["GET","POST","PUT","DELETE"],
-            credentials:true 
-        }
-    )
+    cors()
 )
 app.use("/api/v1/users",userRouter)
 app.use("/api/v1/tasks",taskRouter)
