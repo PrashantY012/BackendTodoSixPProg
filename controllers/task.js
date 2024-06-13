@@ -12,9 +12,6 @@ export const newTask=async (req,res,next)=>{
             "task":task
         }
     )
-    
-    //
-
 }
 export const getMyTask=async(req,res,next)=>{
     const userId=req.user._id;

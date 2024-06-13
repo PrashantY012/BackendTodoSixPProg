@@ -22,7 +22,6 @@ export const register=async (req,res)=>{
     let hashedPassword=await bcrypt.hash(password,10);
     user =await User.create({name,email,password:hashedPassword});
     sendCookie(res,user,"registered successfully",201)
-
 };
 export const getMyDetail=async (req,res)=>{
     //yaha par isAuthenticated ke baad hi pohochega
