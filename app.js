@@ -18,7 +18,7 @@ app.use("/api/v1/tasks",taskRouter)
 app.use(
     cors(
         {
-            origin:[process.env.FRONTEND_URL],
+            origin:"*",
             methods:["GET","POST","PUT","DELETE"],
             credentials:true,  
             CORS_ORIGIN_ALLOW_ALL:true
