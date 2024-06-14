@@ -15,12 +15,10 @@ app.use(cookieParser());
 //using routes
 
 app.use(
-    cors()
+    cors({origin:"http://localhost:5173",method:["GET","POST","PUT","DELETE"],credentials:true})
 )
 app.use("/api/v1/users",userRouter)
 app.use("/api/v1/tasks",taskRouter)
-
-
 
 app.get("/",(req,res)=>{
     res.send("apple")
