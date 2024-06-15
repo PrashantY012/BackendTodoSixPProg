@@ -58,12 +58,14 @@ export const login=async (req,res)=>{
 
 export const logout=async (req,res)=>{
         // res.clearCookie("token");
-        res.cookie("token","t",{
-            maxAge:0
-        })
-        res.status(201).json({
+        res.cookie("token","aple",{
+            maxAge:0,
+            httpOnly:true,
+            sameSite:process.env.NODE_ENV==="Development"?"lax":"none",
+            secure:process.env.NODE_ENV==="Development"?false:true,
+            
+        }).json({
             "Status":true,
             "Message":"Cookie Cleared"
         })
-
 };
