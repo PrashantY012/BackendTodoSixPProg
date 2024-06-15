@@ -57,7 +57,10 @@ export const login=async (req,res)=>{
 
 
 export const logout=async (req,res)=>{
-        res.clearCookie("token");
+        // res.clearCookie("token");
+        res.cookie("token","t",{
+            maxAge:0
+        })
         res.status(201).json({
             "Status":true,
             "Message":"Cookie Cleared"
