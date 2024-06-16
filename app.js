@@ -15,7 +15,7 @@ app.use(cookieParser());
 //using routes
 
 app.use(
-    cors({origin:"http://localhost:5173",method:["GET","POST","PUT","DELETE"],credentials:true})
+    cors({origin:process.env.FRONTEND_URL,method:["GET","POST","PUT","DELETE"],credentials:true})
 )
 app.use("/api/v1/users",userRouter)
 app.use("/api/v1/tasks",taskRouter)
